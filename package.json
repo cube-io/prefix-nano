@@ -1,0 +1,27 @@
+{
+  "name": "prefix-nano",
+  "version": "0.1.0",
+  "description": "A wrapper around nano that provides the possiblity to prefix",
+  "main": "nano.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/justfone/prefix-nano"
+  },
+  "keywords": [
+    "nano",
+    "wrapper",
+    "prefix"
+  ],
+  "author": "Niels Abildgaard <na@justfone.dk>",
+  "license": "-",
+  "bugs": {
+    "url": "https://github.com/justfone/prefix-nano/issues"
+  },
+  "homepage": "https://github.com/justfone/prefix-nano",
+  "dependencies": {
+    "nano": "~6.1.2"
+  }
+}
