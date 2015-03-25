@@ -6,7 +6,7 @@ var initialize = function(url, prefix) {
     return realNano(url);
   }
 
-  return new NanoProxy(nano(url), prefix);
+  return new NanoProxy(realNano(url), prefix);
 };
 
 module.exports = initialize;
