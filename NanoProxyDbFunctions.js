@@ -28,7 +28,7 @@ NanoProxyDbFunctions.prototype.compact = function(name, designname, callback) {
 };
 
 NanoProxyDbFunctions.prototype.replicate = function(source, target, opts, callback) {
-  return this.nano.db.replicate(source, target, opts, callback);
+  return this.nano.db.replicate(prefixName.call(this, source), target, opts, callback);
 };
 
 NanoProxyDbFunctions.prototype.changes = function(name, params, callback) {
