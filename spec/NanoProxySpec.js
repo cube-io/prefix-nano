@@ -49,4 +49,24 @@ describe("NanoProxy", function() {
 
         expect(realNanoMock.db.use).toHaveBeenCalledWith("prefix_other_database");
     });
+
+    it("proxies `request`, `relax` and `dinosaur` with a prefixing of the db option", function() {
+        var realNanoMock = {
+            request: jasmine.createSpy("real nano request")
+        };
+        var nano = new NanoProxy(realNanoMock, "prefix");
+        var callback = function verySpecificCallback() {};
+
+        nano.request({db: "database"}, callback);
+
+        expect(realNanoMock.request).toHaveBeenCalledWith({db: "prefix_database"}, callback);
+
+        nano.relax({db: "other_database"}, callback);
+
+        expect(realNanoMock.request).toHaveBeenCalledWith({db: "prefix_other_database"}, callback);
+
+        nano.dinosaur({db: "third_database"}, callback);
+
+        expect(realNanoMock.request).toHaveBeenCalledWith({db: "prefix_third_database"}, callback);
+    });
 });
