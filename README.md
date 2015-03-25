@@ -6,7 +6,7 @@ What does that mean?
 Well, there will be an optional argument when establishing database connection:
 
 ```js
-var db = require("nano")(url,[ prefix]);
+var db = require("nano")(url[, prefix]);
 ```
 
 What happens if a prefix is added?
