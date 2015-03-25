@@ -16,7 +16,10 @@ NanoProxy.prototype.use = function(name) {
 NanoProxy.prototype.scope = NanoProxy.prototype.use;
 
 NanoProxy.prototype.request = function(opts, callback) {
-  throw new Error("Not implemented");
+  if(opts.db) {
+    opts.db = [this.prefix, opts.db].join("_");
+  }
+  return this.nano.request(opts, callback);
 };
 
 NanoProxy.prototype.relax = NanoProxy.prototype.request;
