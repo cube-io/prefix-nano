@@ -15,8 +15,8 @@ NanoProxyDbFunctions.prototype.get = function(name, callback) {
   return this.nano.db.get(prefixName.call(this, name), callback);
 };
 
-NanoProxyDbFunctions.prototype.destroy = function(name, callback) {
-  return this.nano.db.destroy(prefixName.call(this, name), callback);
+NanoProxyDbFunctions.prototype.destroy = function(name, rev, callback) {
+  return this.nano.db.destroy(prefixName.call(this, name), rev, callback);
 };
 
 NanoProxyDbFunctions.prototype.list = function(callback) {
