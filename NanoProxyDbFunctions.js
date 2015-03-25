@@ -12,31 +12,31 @@ function prefixName(name) {
 }
 
 NanoProxyDbFunctions.prototype.get = function(name, callback) {
-
+  return this.nano.db.get(prefixName.call(this, name), callback);
 };
 
 NanoProxyDbFunctions.prototype.destroy = function(name, callback) {
-
+  return this.nano.db.destroy(prefixName.call(this, name), callback);
 };
 
 NanoProxyDbFunctions.prototype.list = function(callback) {
-
+  return this.nano.db.list(callback);
 };
 
 NanoProxyDbFunctions.prototype.compact = function(name, designname, callback) {
-
+  return this.nano.db.compact(prefixName.call(this, name), designname, callback);
 };
 
 NanoProxyDbFunctions.prototype.replicate = function(source, target, opts, callback) {
-
+  return this.nano.db.replicate(source, target, opts, callback);
 };
 
 NanoProxyDbFunctions.prototype.changes = function(name, params, callback) {
-
+  return this.nano.db.changes(prefixName.call(this, name), params, callback);
 };
 
 NanoProxyDbFunctions.prototype.follow = function(name, params, callback) {
-
+  return this.nano.db.follow(prefixName.call(this, name), params, callback);
 };
 
 NanoProxyDbFunctions.prototype.use = function(name) {
@@ -44,4 +44,3 @@ NanoProxyDbFunctions.prototype.use = function(name) {
 };
 
 module.exports = NanoProxyDbFunctions;
-
