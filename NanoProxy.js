@@ -9,9 +9,8 @@ var NanoProxy = function(nano, prefix) {
   this.config = this.nano.config;
 };
 
-NanoProxy.prototype.use = function(db) {
-  return this.db.use(db);
-  // return this.nano.use([this.prefix, db].join("_"));
+NanoProxy.prototype.use = function(name) {
+  return this.db.use(name);
 };
 
 NanoProxy.prototype.scope = NanoProxy.prototype.use;
