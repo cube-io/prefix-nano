@@ -31,7 +31,7 @@ describe("NanoProxy", function() {
         expect(realNanoMock.followUpdates).toHaveBeenCalledWith(params, callback);
     });
 
-    it("proxies `use` with a prefixing of the name", function() {
+    it("proxies `use` and `scope` with a prefixing of the name", function() {
         var useSpy = jasmine.createSpy("real nano use");
         var realNanoMock = {
             use: useSpy,
@@ -44,5 +44,9 @@ describe("NanoProxy", function() {
         nano.use("database");
 
         expect(realNanoMock.db.use).toHaveBeenCalledWith("prefix_database");
+
+        nano.scope("other_database");
+
+        expect(realNanoMock.db.use).toHaveBeenCalledWith("prefix_other_database");
     });
 });
