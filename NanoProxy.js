@@ -23,11 +23,11 @@ NanoProxy.prototype.relax = NanoProxy.prototype.request;
 NanoProxy.prototype.dinosaur = NanoProxy.prototype.request;
 
 NanoProxy.prototype.updates = function(params, callback) {
-  throw new Error("Not implemented");
+  return this.nano.updates(params, callback);
 };
 
 NanoProxy.prototype.followUpdates = function(params, callback) {
-  throw new Error("Not implemented");
+  return this.nano.followUpdates(params, callback);
 };
 
 module.exports = NanoProxy;
