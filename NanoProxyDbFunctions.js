@@ -4,8 +4,12 @@ var NanoProxyDbFunctions = function(nano, prefix) {
 };
 
 NanoProxyDbFunctions.prototype.create = function(name, callback) {
-
+  return this.nano.db.create(prefixName.call(this, name), callback);
 };
+
+function prefixName(name) {
+  return [this.prefix, name].join("_");
+}
 
 NanoProxyDbFunctions.prototype.get = function(name, callback) {
 
