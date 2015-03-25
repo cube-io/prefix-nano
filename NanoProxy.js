@@ -26,7 +26,7 @@ NanoProxy.prototype.updates = function(params, callback) {
   throw new Error("Not implemented");
 };
 
-NanoProxy.prototype.followUpdates(params, callback) {
+NanoProxy.prototype.followUpdates = function(params, callback) {
   throw new Error("Not implemented");
 };
 
