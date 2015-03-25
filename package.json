@@ -4,7 +4,7 @@
   "description": "A wrapper around nano that provides the possiblity to prefix",
   "main": "nano.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --harmony node_modules/jasmine/bin/jasmine.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/justfone/prefix-nano",
   "dependencies": {
     "nano": "~6.1.2"
+  },
+  "devDependencies": {
+    "jasmine": "~2.2.1"
   }
 }
