@@ -40,7 +40,7 @@ NanoProxyDbFunctions.prototype.follow = function(name, params, callback) {
 };
 
 NanoProxyDbFunctions.prototype.use = function(name) {
-  return this.nano.use([this.prefix, name].join("_"));
+  return this.nano.use(prefixName.call(this, name));
 };
 
 module.exports = NanoProxyDbFunctions;
