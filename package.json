@@ -1,6 +1,6 @@
 {
   "name": "prefix-nano",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A wrapper around nano that provides the possiblity to prefix",
   "main": "nano.js",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/justfone/prefix-nano",
   "dependencies": {
-    "nano": "~6.1.2"
+    "nano": "6.1.2"
   },
   "devDependencies": {
     "jasmine": "~2.2.1"
