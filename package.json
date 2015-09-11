@@ -16,7 +16,7 @@
     "prefix"
   ],
   "author": "Niels Abildgaard <na@justfone.dk>",
-  "license": "-",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/justfone/prefix-nano/issues"
   },
