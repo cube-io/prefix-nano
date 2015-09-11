@@ -15,7 +15,10 @@
     "wrapper",
     "prefix"
   ],
-  "author": "Niels Abildgaard <na@justfone.dk>",
+  "author": "CubeIO A/S <devs@cubeio.com> (http://cubeio.com)",
+  "contributors": [
+    "Niels Abildgaard <na@cubeio.com>"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/justfone/prefix-nano/issues"
