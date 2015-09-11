@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/justfone/prefix-nano"
+    "url": "git://github.com/cube-io/prefix-nano"
   },
   "keywords": [
     "nano",
@@ -21,9 +21,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/justfone/prefix-nano/issues"
+    "url": "https://github.com/cube-io/prefix-nano/issues"
   },
-  "homepage": "https://github.com/justfone/prefix-nano",
+  "homepage": "https://github.com/cube-io/prefix-nano",
   "dependencies": {
     "nano": "6.1.2"
   },
