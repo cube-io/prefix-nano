@@ -14,7 +14,7 @@ It is basically prepended to all database names requested through that connectio
 So we can do this to get a connection to the `"voizee_dialplans"`-database:
 
 ```js
-var db = require("nano")(url, "voizee");
-var dialplanDb = couchDb.use("dialplans");
+var db = require("prefix-nano")(url, "voizee");
+var dialplanDb = db.use("dialplans");
 ```
 
